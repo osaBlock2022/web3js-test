@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            * {margin:0; padding:0px;}
+        </style>
+    </head>
+    <body>
+        <div id="top" style="background-color:lightcoral"></div>
+        <div id="footer" style="height:200px;background-color:lightblue">
+            <p>Something 1</p>
+            <p>Something 2</p>
+            <p>Something 3</p>
+            <p>Something 4</p>
+            <p>Something 5</p>
+            <p>Something 6</p>
+            <p>Something 7</p>
+            <p>Something 8</p>
+            <p>Something 9</p>
+        </div>
+    </body>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+    <script>
+        console.log("First Tag Reached")
+        document.getElementById("top").style.height = ($(window).height() - 200)+"px";
+    </script>
+    <script>
+        console.log("JQuery Tag Reached");
+        alert("Window Inner Height: "+window.innerHeight+'\n'+
+            "Window Outer Height: "+window.outerHeight+'\n'+
+            "Window Height by jQuery: "+$(window).height()+"\n");
+    </script>
+</html>
